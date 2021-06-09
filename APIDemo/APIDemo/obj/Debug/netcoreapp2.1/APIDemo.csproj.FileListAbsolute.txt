@@ -13,6 +13,6 @@ C:\Users\mario.jordan\source\repos\sandbox\APIDemo\APIDemo\APIDemo\obj\Debug\net
 C:\Users\mario.jordan\source\repos\sandbox\APIDemo\APIDemo\APIDemo\obj\Debug\netcoreapp2.1\APIDemo.RazorTargetAssemblyInfo.cache
 C:\Users\mario.jordan\source\repos\sandbox\APIDemo\APIDemo\APIDemo\obj\Debug\netcoreapp2.1\APIDemo.genruntimeconfig.cache
 C:\Users\mario.jordan\source\repos\sandbox\APIDemo\APIDemo\APIDemo\bin\Debug\netcoreapp2.1\APIDemo.pdb
-C:\Users\mario.jordan\source\repos\sandbox\APIDemo\APIDemo\APIDemo\obj\Debug\netcoreapp2.1\APIDemo.csproj.CoreCompileInputs.cache
 C:\Users\mario.jordan\source\repos\sandbox\APIDemo\APIDemo\APIDemo\obj\Debug\netcoreapp2.1\APIDemo.dll
 C:\Users\mario.jordan\source\repos\sandbox\APIDemo\APIDemo\APIDemo\obj\Debug\netcoreapp2.1\APIDemo.pdb
+C:\Users\mario.jordan\source\repos\sandbox\APIDemo\APIDemo\APIDemo\obj\Debug\netcoreapp2.1\APIDemo.csproj.CoreCompileInputs.cache
