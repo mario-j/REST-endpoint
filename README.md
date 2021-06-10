@@ -14,6 +14,8 @@ Click on the endpoint that you'd like to use and then click the Try It Out Butto
 
 Then enter the required input field and click Execute to execute the endpoint.
 
+The Search endpoint returns a JSON list of the records that contain the input in their first name or last name. The Add endpoint adds the entered user into the database.
+
 To view the current state of the database, open the SQL Server Object Explorer window. The window can be accessed via View -> SQL Server Object Explorer. 
 
 Open the file path shown below and right click on the User table and select View Data to open the User table.
