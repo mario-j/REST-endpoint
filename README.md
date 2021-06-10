@@ -8,11 +8,18 @@ Copy the repository to your local machine and open the solution using Visual Stu
 
 ![image](https://user-images.githubusercontent.com/54779892/121532514-071ccb80-c9c5-11eb-9986-3543c6b525d7.png)
 
+Click on the endpoint that you'd like to use and then click the Try It Out Button.
+
+![image](https://user-images.githubusercontent.com/54779892/121533847-48fa4180-c9c6-11eb-9027-1d288f7b7817.png)
+
+Then enter the required input field and click Execute to execute the endpoint.
+
 To view the current state of the database, open the SQL Server Object Explorer window. The window can be accessed via View -> SQL Server Object Explorer. 
 
 Open the file path shown below and right click on the User table and select View Data to open the User table.
 
 ![image](https://user-images.githubusercontent.com/54779892/121533479-ee60e580-c9c5-11eb-86db-8d0e967b409a.png)
+
 
 ## Seeding
 
