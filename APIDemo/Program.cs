@@ -1,31 +1,31 @@
-using APIDemo.Controllers;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 using APIDemo.Data;
-using APIDemo.Data.Models;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using static APIDemo.Data.DBInitializer;
 
-namespace APIDemo.Test
+namespace APIDemo
 {
-    [TestClass]
-    public class UnitTest1
-    { 
-
-        [TestMethod]
-        public void TestValuesController()
+    public class Program
+    {
+        public static void Main(string[] args)
         {
-            var host = CreateWebHostBuilder(null).Build();
+            var host = CreateWebHostBuilder(args).Build();
 
+            CreateDbIfNotExists(host);
+
+            host.Run();
+        }
+
+        private static void CreateDbIfNotExists(IWebHost host)
+        {
             using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
@@ -33,10 +33,6 @@ namespace APIDemo.Test
                 {
                     var context = services.GetRequiredService<Context>();
                     DbInitializer.Initialize(context);
-                    var usersController = new UsersController(context);
-                    var result = usersController.SearchUsers("immy");
-                    var test = 0;
-
                 }
                 catch (Exception ex)
                 {
@@ -46,12 +42,8 @@ namespace APIDemo.Test
             }
         }
 
-
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
-
     }
-
-
 }

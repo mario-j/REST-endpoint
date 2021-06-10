@@ -29,12 +29,5 @@ The database is initially seeded in the DBInitializer.cs class. The initial stat
 
 ![image](https://user-images.githubusercontent.com/54779892/121533120-9629e380-c9c5-11eb-843e-ebfd98659eaf.png)
 
-## Testing
-
-Testing is done in the APiDemo.Tests project. To run the tests go to View -> Test Explorer, right click on the project, and run the tests. 
-
-![image](https://user-images.githubusercontent.com/54779892/121607627-fc3e5700-ca15-11eb-922d-fe2e0802c99d.png)
-
-
 
 
