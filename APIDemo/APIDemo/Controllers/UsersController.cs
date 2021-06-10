@@ -19,6 +19,7 @@ namespace APIDemo.Controllers
             _context = context;
         }
 
+
         //Return users with first or last name's matching 'input' to endpoint
         [HttpGet("{input}")]
         public ActionResult<List<User>> SearchUsers(string input)
