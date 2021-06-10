@@ -1,6 +1,6 @@
 # APIDemo
 
-A sample API Demo that seeds a database with 3 users and provides 2 endpoints for searching users and adding users.
+A sample API Demo that seeds a database with 3 users and provides 2 endpoints for searching existing users and adding new users.
 
 ## Use
 
