@@ -32,8 +32,14 @@ namespace APIDemo.Controllers
         {
             try
             {
-                _context.Add(user);
-                _context.SaveChanges();
+                using (var transaction = _context.Database.BeginTransaction())
+                {
+                    _context.Add(user);
+                    _context.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].[User] ON;");
+                    _context.SaveChanges();
+                    _context.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].[User] OFF");
+                    transaction.Commit();
+                }
             }
             catch(Exception ex)
             {

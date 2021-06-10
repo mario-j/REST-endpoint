@@ -17,9 +17,10 @@ namespace APIDemo.Data
                 // Look for any users.
                 if (context.Users.Any())
                 {
-                    return;   // DB has been seeded
+                    return;   // DB has already been seeded
                 }
 
+                //Seed the database
                 var users = new User[]
                 {
                     new User{FirstName="Timmy", LastName="Turner", Age=11, Address="360 Circle Lane", Interests="Baseball, Gardening" },
