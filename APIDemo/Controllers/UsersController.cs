@@ -21,7 +21,7 @@ namespace APIDemo.Controllers
 
 
         //Return users with first or last name's matching 'input' to endpoint
-        [HttpGet("{input}")]
+        [HttpGet("search/{input}")]
         public ActionResult<List<User>> SearchUsers(string input)
         {
             return _context.Users.Where(user => user.FirstName.Contains(input) || user.LastName.Contains(input)).ToList();
