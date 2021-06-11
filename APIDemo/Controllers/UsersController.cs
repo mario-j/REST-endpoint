@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using APIDemo.Data;
 using APIDemo.Data.Models;
@@ -29,10 +30,14 @@ namespace APIDemo.Controllers
 
         // Add a new user to the DB  
         [HttpPost("add")]
-        public void AddUser([FromBody] User user)
+        public ActionResult<User> AddUser([FromBody] User user)
         {
             try
             {
+                if (_context.Users.Where(x => x.UserId == user.UserId).Count() > 0)
+                {
+                    throw new ArgumentException("User cannot have the same UserId as an existing user", nameof(user));
+                }
                 using (var transaction = _context.Database.BeginTransaction())
                 {
                     _context.Add(user);
@@ -40,11 +45,12 @@ namespace APIDemo.Controllers
                     _context.SaveChanges();
                     _context.Database.ExecuteSqlCommand("SET IDENTITY_INSERT [dbo].[User] OFF");
                     transaction.Commit();
+                    return user;
                 }
             }
             catch(Exception ex)
             {
-
+                return NotFound();
             }
         }
     }
